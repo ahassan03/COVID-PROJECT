@@ -35,5 +35,7 @@ plt.tight_layout()
 plt.show()
 
 
-#CITATION
-#
+#CITATION Power Point Slides
+
+# Fairbanks, Dallin. (April 2025). Descriptive Analytics [Slides 7,8,9,14,15,24].
+# CIS 3330 – Analytic Programming Tools, UTEP. 
