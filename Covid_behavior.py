@@ -11,14 +11,14 @@ smaller_df = df.query(asian_query)
 
 #Scatter Plot
 smaller_df.plot.scatter(x='Country', y='Counts.Handwashes')
-plt.title("Handwashing Frequency: China, South Korea, India")
+plt.title("Handwashing Frequency")
 plt.xlabel("Country")
 plt.ylabel("Country.Handwashes")
 plt.show()
 #print(df)
 #print(df.describe())
-#print(df['Counts.Handwashes','Scores.Masks.Outside home','Scores.Masks.Grocery store','Scores.Masks.Clothing store','Scores.Masks.Work','Scores.Masks.Public transport','Scores.Precautions.Covered mouth sneeze'].describe())
-#print (df.groupby('Country')[['Counts.Handwashes','Scores.Masks.Outside home','Scores.Masks.Grocery store','Scores.Masks.Clothing store','Scores.Masks.Work','Scores.Masks.Public transport','Scores.Precautions.Covered mouth sneeze']].agg(['mean', 'std', 'min']))
+#print(df['Counts.Handwashes','Scores.Masks.Outside home','Scores.Masks.Grocery store','Scores.Precautions.Covered mouth sneeze'].describe())
+#print (df.groupby('Country')[['Counts.Handwashes','Scores.Masks.Outside home','Scores.Precautions.Covered mouth sneeze']].agg(['mean', 'std', 'min']))
 
 
 
