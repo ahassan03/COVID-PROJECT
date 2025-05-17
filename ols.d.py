@@ -4,29 +4,34 @@ import pandas as pd
 import numpy as np
 import statsmodels.api as sm
 
-# 1. load your data (make sure covid_behaviors.csv sits alongside this script)
 csv_path = "covid_behaviors.csv"
 df = pd.read_csv(csv_path)
 
-# 2. inspect column names so you know the exact target header
 print("available columns:")
-for col in df.columns:
-    print("  ", col)
+for col in df.columns: # Written with the help of AI
+    print("  ", col) # Written with the help of AI
 
-# 3. set your dependent variable
-#    look for the column that matches covered-mouth‐sneezing— 
-#    it might be something like "Scores.Precautions.Covered mouth sneeze"
+
 target_col = "Scores.Precautions.Covered mouth sneeze"
 y = df[target_col]
 
-# 4. build your predictors from all other numeric columns
-X = df.select_dtypes(include=[np.number]).drop(columns=[target_col])
+X = df.select_dtypes(include=[np.number]).drop(columns=[target_col]) # Written with the help of AI
 
-# 5. add a constant term (intercept) to the model
+
 X = sm.add_constant(X)
 
-# 6. fit the OLS regression
 model = sm.OLS(y, X).fit()
 
-# 7. show the full summary
+
 print(model.summary())
+
+# CITATION / AI USAGE
+
+# AI Assistance: Line 11
+# Reference: Chat‑GPT 4. (2025, May 15). "Can you show me how to loop over a pandas DataFrame’s columns and print each one?" Generated using OpenAI Chat‑GPT. https://chat.openai.com/
+
+# AI Assistance: Line 12
+# Reference: Chat‑GPT 4. (2025, May 15). "What's the simplest way to print each column name with indentation inside a Python for‑loop?" Generated using OpenAI Chat‑GPT. https://chat.openai.com/
+
+# AI Assistance: Line 18
+# Reference: Chat‑GPT 4. (2025, May 15). "How can I select only numeric columns from a pandas DataFrame and drop a specified column using select_dtypes?" Generated using OpenAI Chat‑GPT. https://chat.openai.com/
